@@ -30,12 +30,12 @@
         <div class="right-column">
           <!-- Sección del formulario -->
           <div class="form-section">
-            <form action="login.php" method="POST">
+            <form id="loginForm">
               <input
                 type="text"
                 id="username"
                 name="username"
-                placeholder="CORREO ELECTRONICO"
+                placeholder="USUARIO"
                 required
               />
               <input
@@ -45,16 +45,9 @@
                 placeholder="CONTRASEÑA"
                 required
               />
-
-              <center><button type="submit">INICIAR SESIÓN</button></center>
+              <center><button type="submit">INICIAR SESION</button></center>
               <hr class="divider-small" />
-              <!-- Línea negra debajo del botón Entrar -->
-              <a href="Registro.html">
-                <button type="button" class="register-button">
-                  REGISTRARTE
-                </button>
-                <!-- Botón de Registro -->
-              </a>
+              <button type="button" class="register-button">REGISTRARTE</button>
             </form>
           </div>
         </div>
@@ -85,6 +78,6 @@
       </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
