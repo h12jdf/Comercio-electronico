@@ -1,86 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <header>
-		<div class="header-left">
-            
-        </div>
-        <div class="header-right">
-            <nav>
-				 <a href="index.html">
-                <button>Inicio</button>
-				</a>
-				<a href="Login.html">
-                <button>Inicio de sesion</button>
-				</a>
-                 <span class="location-text">Ubicación</span>
-            </nav>
-        </div>
+      <div class="header-left"></div>
+      <div class="header-right">
+        <nav>
+          <a href="index.html">
+            <button>Inicio</button>
+          </a>
+          <a href="Login.html">
+            <button>Inicio de sesion</button>
+          </a>
+          <span class="location-text">Ubicación</span>
+        </nav>
+      </div>
     </header>
 
-<div class="login-container">
-    <div class="login-box">
-           
+    <div class="login-container">
+      <div class="login-box">
         <div class="image-section">
-            <img src="Imagenes/logo.JPG" alt="Imagen de Login">
+          <img src="Imagenes/logo.JPG" alt="Imagen de Login" />
         </div>
-         <h2>REGISTRO</h2>
+        <h2>REGISTRO</h2>
         <form action="login.php" method="POST">
-            <div class="form-section">
-                <!-- Columna izquierda -->
-                <div class="left-column">
-                    <input type="text" id="nombre" name="nombre" placeholder="NOMBRE" required>
-                    <input type="text" id="ApellidoP" name="ApellidoP" placeholder="APELLIDO PATERNO" required>
-                    <input type="text" id="ApellidoM" name="ApellidoM" placeholder="APELLIDO MATERNO" required> 
-                    <input type="text" id="Telefono" name="Telefono" placeholder="TELEFONO" required>
-                    <input type="text" id="Direccion" name="Direccion" placeholder="DIRECCION" required>
-                </div>
-
-                <!-- Columna derecha -->
-                <div class="right-column">
-                    <!-- Lista desplegable -->
-                    <select id="TipoUsuario" name="TipoUsuario" required>
-                        <option value="" disabled selected>Seleccione un tipo de usuario</option>
-                        <option value="mexico">Cliente</option>
-                        <option value="spain">Trabajador</option>
-                    </select>
-                    <input type="text" id="username" name="username" placeholder="CORREO ELECTRONICO" required>                   
-                    <input type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
-                    <input type="password" id="ConfirmarPassword" name="ConfirmarPassword" placeholder="CONFIRMAR CONTRASEÑA" required>
-                    <center><button type="submit" class="buttonFormulario">REGISTRARTE</button></center>
-                </div>
+          <div class="form-section">
+            <!-- Columna izquierda -->
+            <div class="left-column">
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="NOMBRE"
+                required
+              />
+              <input
+                type="text"
+                id="ApellidoP"
+                name="ApellidoP"
+                placeholder="APELLIDO PATERNO"
+                required
+              />
+              <input
+                type="text"
+                id="ApellidoM"
+                name="ApellidoM"
+                placeholder="APELLIDO MATERNO"
+                required
+              />
+              <input
+                type="text"
+                id="Telefono"
+                name="Telefono"
+                placeholder="TELEFONO"
+                required
+              />
+              <input
+                type="text"
+                id="Direccion"
+                name="Direccion"
+                placeholder="DIRECCION"
+                required
+              />
             </div>
+
+            <!-- Columna derecha -->
+            <div class="right-column">
+              <!-- Lista desplegable -->
+              <select id="TipoUsuario" name="TipoUsuario" required>
+                <option value="" disabled selected>
+                  Seleccione un tipo de usuario
+                </option>
+                <option value="mexico">Cliente</option>
+                <option value="spain">Trabajador</option>
+              </select>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="CORREO ELECTRONICO"
+                required
+              />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="CONTRASEÑA"
+                required
+              />
+              <input
+                type="password"
+                id="ConfirmarPassword"
+                name="ConfirmarPassword"
+                placeholder="CONFIRMAR CONTRASEÑA"
+                required
+              />
+              <center>
+                <button type="submit" class="buttonFormulario">
+                  REGISTRARTE
+                </button>
+              </center>
+            </div>
+          </div>
         </form>
+      </div>
     </div>
-</div>
 
-	<footer>
-        <!-- Sección izquierda con imagen y texto -->
-        <div class="footer-left">
-            <img src="Imagenes/logo_pieDePagina.JPG" alt="Logo" class="footer-logo">
-            <span><strong>Todofix   </strong>   2024®</span>
-        </div>
+    <footer>
+      <!-- Sección izquierda con imagen y texto -->
+      <div class="footer-left">
+        <img
+          src="Imagenes/logo_pieDePagina.JPG"
+          alt="Logo"
+          class="footer-logo"
+        />
+        <span><strong>Todofix </strong> 2024®</span>
+      </div>
 
-        <!-- Sección derecha con botones de texto -->
-        <div class="footer-right">
-			<a href="Acerca de.html">
-            <button>Acerca de</button>
-			</a>
-			 <a href="Contacto.html">
-            <button>Contacto</button>
-			</a>
-			 <a href="Acerca de.html">
-            <button>Aviso de privacidad</button>
-			</a>
-        </div>
+      <!-- Sección derecha con botones de texto -->
+      <div class="footer-right">
+        <a href="Acerca de.html">
+          <button>Acerca de</button>
+        </a>
+        <a href="Contacto.html">
+          <button>Contacto</button>
+        </a>
+        <a href="Acerca de.html">
+          <button>Aviso de privacidad</button>
+        </a>
+      </div>
     </footer>
 
-    <script src="scripts.js"></script>
-</body>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
