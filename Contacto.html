@@ -1,66 +1,91 @@
 .<!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
- <header>
-        <div class="header-left">
-            <img src="Imagenes/user.png" alt="Icono" class="icon"> <!-- Icono -->
-            <span class="username">Nombre de Usuario</span> <!-- Nombre de usuario -->
-        </div>
-        <div class="header-right">
-           <a href="index.html">
-                <button>Inicio</button></a>
-				<a href="Perfil.html">
-                <button>Solicitudes</button></a>
-                 <span class="location-text">Ubicación</span>
-        </div>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img src="Imagenes/user.png" alt="Icono" class="icon" />
+        <!-- Icono -->
+        <span class="username">Nombre de Usuario</span>
+        <!-- Nombre de usuario -->
+      </div>
+      <div class="header-right">
+        <a href="index.html"> <button>Inicio</button></a>
+        <a href="Perfil.html"> <button>Solicitudes</button></a>
+        <span class="location-text">Ubicación</span>
+      </div>
     </header>
-	
-    <div class="login-container">
-        <div class="contacto-box">
-			<h2>Contacto</h2>
-            <div class="image-section">
-                <img src="Imagenes/logo.JPG" alt="Imagen de Login">
-            </div>
-			<div class="right-column">
-            <div class="form-section">
-				
-                <form action="/php/Correo.php" method="POST">        
-                    <input type="text" id="name" name="name" placeholder="NOMBRE" required>                   
-                    <input type="email" id="email" name="email" placeholder="CORREO ELECTRONICO" required>
-		    <input type="text" id="asunto" name="asunto" placeholder="ASUNTO" required>					
-		    <textarea type="text" id="mensaje" name="mensaje" placeholder="MENSAJE" rows="4"></textarea>
-		    <hr class="divider-small"> <!-- Línea negra debajo del botón Entrar -->   
-  		    <button type="button" class="register-button">Enviar</button> <!-- Botón de Inicio de sesion -->
-                </form>
-  
-            </div>
-			</div>
-        </div>
-    </div>
-	<footer>
-        <!-- Sección izquierda con imagen y texto -->
-        <div class="footer-left">
-            <img src="Imagenes/logo_pieDePagina.JPG" alt="Logo" class="footer-logo">
-            <span><strong>Todofix   </strong>   2024®</span>
-        </div>
 
-        <!-- Sección derecha con botones de texto -->
-        <div class="footer-right">
-            <a href="Acerca de.html">
-            <button>Acerca de</button></a>
-			 <a href="Contacto.html">
-            <button>Contacto</button></a>
-			 <a href="Acerca de.html">
-            <button>Aviso de privacidad</button></a>
+    <div class="login-container">
+      <div class="contacto-box">
+        <h2>Contacto</h2>
+        <div class="image-section">
+          <img src="Imagenes/logo.JPG" alt="Imagen de Login" />
         </div>
+        <div class="right-column">
+          <div class="form-section">
+            <form action="/php/Correo.php" method="POST">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="NOMBRE"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="CORREO ELECTRONICO"
+                required
+              />
+              <input
+                type="text"
+                id="asunto"
+                name="asunto"
+                placeholder="ASUNTO"
+                required
+              />
+              <textarea
+                type="text"
+                id="mensaje"
+                name="mensaje"
+                placeholder="MENSAJE"
+                rows="4"
+              ></textarea>
+              <hr class="divider-small" />
+              <!-- Línea negra debajo del botón Entrar -->
+              <button type="button" class="register-button">Enviar</button>
+              <!-- Botón de Inicio de sesion -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <!-- Sección izquierda con imagen y texto -->
+      <div class="footer-left">
+        <img
+          src="Imagenes/logo_pieDePagina.JPG"
+          alt="Logo"
+          class="footer-logo"
+        />
+        <span><strong>Todofix </strong> 2024®</span>
+      </div>
+
+      <!-- Sección derecha con botones de texto -->
+      <div class="footer-right">
+        <a href="Acerca de.html"> <button>Acerca de</button></a>
+        <a href="Contacto.html"> <button>Contacto</button></a>
+        <a href="Acerca de.html"> <button>Aviso de privacidad</button></a>
+      </div>
     </footer>
 
     <script src="js/scripts.js"></script>
-</body>
+  </body>
 </html>
