@@ -12,7 +12,9 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
     if (!response.ok) throw new Error("Error en el inicio de sesión");
     const data = await response.json();
-    alert(`Inicio de sesión exitoso: ${data.username}`);
+    alert(`Inicio de sesión exitoso: ${data.user.Nombre}`);
+    localStorage.setItem("userData", JSON.stringify(data.user));
+    window.location.href = "/index.html";
   } catch (error) {
     alert("Hubo un error: " + error.message);
   }

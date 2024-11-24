@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendedor</title>
+    <link rel="stylesheet" href="css/stylesIndex.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+<header>
+        <div class="header-left">
+            <img src="Imagenes/user.png" alt="Icono" class="icon"> <!-- Icono -->
+            <span class="username">Nombre de Usuario</span> <!-- Nombre de usuario -->
+        </div>
+        <div class="header-right">
+          <button>Inicio</button>
+          <button>Solicitudes</button>
+          <button>Ubicación</button>
+        </div>
+    </header>
+
+<div class="main-container">
+
+	<div class="service-container">
+		
+    <img src="Imagenes/user.png" alt="Imagen de Cabecera" class="header-image"> <!-- Imagen en la parte superior -->
+    <div class="text-section">
+        <h2 class="service-title">(Nombre del trabajador)</h2>
+        <p class="service-description">Documentos</p>
+        <p class="service-description">Valoraciones</p>
+    </div>
+    <div class="rating-section">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+    </div>
+		<p class="service-description">Horario: </p>
+		<p class="service-description">Ubicacion: </p>
+   
+</div>
+		<div class="carousel-container">
+			<center><h1>Nombre del servicio</h1></center>
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="Imagenes/Ropero encajonado.png" alt="Imagen 1" class="carousel-image" onclick="openModal(this)">
+            <div class="carousel-caption">Texto 1</div>
+        </div>
+        <div class="carousel-item">
+            <img src="Imagenes/Ropero encajonado.png" alt="Imagen 2" class="carousel-image" onclick="openModal(this)">
+            <div class="carousel-caption">Texto 2</div>
+        </div>
+        <div class="carousel-item">
+            <img src="Imagenes/Ropero encajonado.png" alt="Imagen 3" class="carousel-image" onclick="openModal(this)">
+            <div class="carousel-caption">Texto 3</div>
+        </div>
+        <div class="carousel-item">
+            <img src="Imagenes/Ropero encajonado.png" alt="Imagen 4" class="carousel-image" onclick="openModal(this)">
+            <div class="carousel-caption">Texto 4</div>
+        </div>
+        <div class="carousel-item">
+            <img src="Imagenes/Ropero encajonado.png" alt="Imagen 5" class="carousel-image" onclick="openModal(this)">
+            <div class="carousel-caption">Texto 5</div>
+        </div>
+    </div>
+    <div class="carousel-indicators">
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+    </div>
+</div>
+
+<!-- Modal para mostrar la imagen ampliada -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div>
+	<h2>$ ## MXN</h2>
+	<h2>Detalles del producto</h2>
+	<h3>escribe aqui la descripcion....</h3>
+	<div class="text-section">
+        <p>Valoraciones del servicio/producto</p>
+    </div>
+    <div class="rating-section">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+		
+		<h3>Comentarios</h3>
+		
+		 <center><button class="request-button">Solicitar Servicio</button></center>
+    </div>
+	</div>
+	 </div>
+ <footer>
+        <!-- Sección izquierda con imagen y texto -->
+        <div class="footer-left">
+            <img src="Imagenes/logo_pieDePagina.JPG" alt="Logo" class="footer-logo">
+            <span><strong>Todofix   </strong>   2024®</span>
+        </div>
+
+        <!-- Sección derecha con botones de texto -->
+        <div class="footer-right">
+            <button>Acerca de</button>
+            <button>Contacto</button>
+            <button>Aviso de privacidad</button>
+        </div> 
+    </footer>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendedor</title>
+    <link rel="stylesheet" href="css/stylesIndex.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div class="header-left">
+        <img src="Imagenes/user.png" alt="Icono" class="icon" />
+        <!-- Icono -->
+        <span class="username">Nombre de Usuario</span>
+        <!-- Nombre de usuario -->
+      </div>
+      <div class="header-right">
+        <a href="index.html"> <button>Inicio</button></a>
+        <a href="Perfil.html"> <button>Mis solicitudes</button></a>
+        <span class="location-text">Ubicación</span>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <div class="service-container">
+        <img
+          src="Imagenes/user.png"
+          alt="Imagen de Cabecera"
+          class="header-image"
+        />
+        <!-- Imagen actual que permanece -->
+        <div class="text-section">
+          <h2 class="service-title">(Nombre del trabajador)</h2>
+          <img
+            src="Imagenes/lapiz.png"
+            alt="Editar"
+            onclick="openPopup()"
+            class="side-image"
+          />
+          <!-- Nueva imagen -->
+          <p class="service-description">Documentos:</p>
+
+          <p class="service-description">Valoraciones:</p>
+        </div>
+        <div class="rating-section">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9734;</span>
+        </div>
+        <img
+          src="Imagenes/lapiz.png"
+          alt="Editar"
+          onclick="openPopup()"
+          class="side-image"
+        />
+        <!-- Nueva imagen -->
+        <p class="service-description">Horario:</p>
+        <img
+          src="Imagenes/lapiz.png"
+          alt="Editar"
+          onclick="openPopup()"
+          class="side-image"
+        />
+        <!-- Nueva imagen -->
+        <p
+          class="service-description"
+          alt="Edita"
+          onclick="openPopup()"
+          class="side-image"
+        >
+          Ubicacion:
+        </p>
+        <button class="request-button">Cerrar sesión</button>
+      </div>
+      <!-- Cuadro emergente para editar el texto -->
+      <div id="editPopup" class="popup">
+        <div class="popup-content">
+          <h3>Editar Información</h3>
+          <input
+            type="text"
+            id="newText"
+            placeholder="Ingresa el nuevo texto"
+          />
+          <div class="popup-buttons">
+            <button onclick="acceptEdit()">Aceptar</button>
+            <button onclick="closePopup()">Cancelar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-containers">
+        <button class="service-button" id="mis-servicios">
+          <div class="overlay">
+            <h2>Mis servicios</h2>
+          </div>
+        </button>
+        <button class="service-button" id="nuevos-servicios">
+          <div class="overlay">
+            <h2>Nuevos servicios</h2>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cuadro de formulario para "Nuevo Servicio" -->
+    <div id="form-popup" class="form-popup">
+      <div class="form-popup-content">
+        <button id="close-form" class="close-btn">X</button>
+        <h2>Registro de Nuevo Servicio</h2>
+        <form>
+          <input
+            type="text"
+            id="service-name"
+            name="service-name"
+            placeholder="Nombre del servicio"
+            required
+          /><br /><br />
+          <select id="service-category" name="service-category" required>
+            <option value="" disabled selected>Categoría del servicio</option>
+            <option value="plomeria">Plomería</option>
+            <option value="electricidad">Electricidad</option>
+            <option value="albanileria">Albañilería</option>
+            <option value="carpinteria">Carpintería</option>
+            <option value="pintura">Pintura</option></select
+          ><br /><br />
+          <input
+            type="text"
+            id="ubicacion"
+            name="ubicacion"
+            required
+            placeholder="Ubicacion"
+          /><br /><br />
+          <textarea
+            type="text"
+            id="descripcion"
+            name="descripcion"
+            placeholder="Descripcion"
+            rows="4"
+          ></textarea>
+
+          <input
+            type="text"
+            id="precio"
+            name="precio"
+            placeholder="Precio (MXN)"
+            required
+          /><br /><br />
+          <label for="service-image">Cargar Imagen:</label>
+          <input
+            type="file"
+            id="service-image"
+            name="service-image"
+            accept="image/*"
+          /><br /><br />
+
+          <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Cuadro para la lista de "Mis Servicios" -->
+    <div id="my-services-popup" class="popup">
+      <div class="popup-content">
+        <button id="close-my-services" class="close-btn">X</button>
+        <h2>Mis Servicios</h2>
+
+        <div class="service-list">
+          <!-- Ejemplo de un servicio -->
+          <div class="service-item">
+            <img
+              src="Imagenes/Ropero encajonado.png"
+              alt="Servicio"
+              class="service-image"
+            />
+            <span class="service-title">Nombre del Servicio</span>
+            <button class="delete-btn">X</button>
+          </div>
+          <!-- Agrega más servicios aquí -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Cuadro de diálogo de confirmación -->
+    <div id="delete-dialog" class="dialog">
+      <div class="dialog-content">
+        <p>¿Desea eliminar este servicio?</p>
+        <button id="confirm-delete" class="dialog-btn">Sí</button>
+        <button id="cancel-delete" class="dialog-btn">No</button>
+      </div>
+    </div>
+
+    <footer>
+      <!-- Sección izquierda con imagen y texto -->
+      <div class="footer-left">
+        <img
+          src="Imagenes/logo_pieDePagina.JPG"
+          alt="Logo"
+          class="footer-logo"
+        />
+        <span><strong>Todofix </strong> 2024®</span>
+      </div>
+
+      <!-- Sección derecha con botones de texto -->
+      <div class="footer-right">
+        <a href="Acerca de.html"> <button>Acerca de</button></a>
+        <a href="Contacto.html"> <button>Contacto</button></a>
+        <a href="Acerca de.html"> <button>Aviso de privacidad</button></a>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
