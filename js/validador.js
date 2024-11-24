@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("username").innerText = userData.Nombre;
   } else {
     // Si no hay datos, redirige al login
-    window.location.href = "/Login.html";
+    window.location.href = "/login.html";
   }
 });
