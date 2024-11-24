@@ -6,6 +6,7 @@ body {
     background-color: white; /* Fondo blanco para la página principal */
     display: flex;
 	flex-direction: column;  /* Para que el contenido ocupe toda la altura disponible */
+    height: 100vh;  /* Asegura que el body ocupe toda la altura de la ventana */
 }
 
 
@@ -558,6 +559,7 @@ button {
 	width: 90%; /* Ancho reducido */
 	margin: 30px auto; /* Centrado en la pantalla */
 	gap: 0.5%; /* Espacio entre los elementos (botones e información del vendedor) */
+
 }
 
 .service-container {
