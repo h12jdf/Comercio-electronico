@@ -11,8 +11,19 @@ document
     const Contrasea = document.getElementById("Contrasea").value;
     const Ciudad = document.getElementById("Ciudad").value;
 
+    console.log(JSON.stringify({
+      Nombre,
+      ApellidoP,
+      ApellidoM,
+      Telefono,
+      Direccion,
+      Correo,
+      Contrasea,
+      Ciudad,
+    }))
+
     try {
-      const response = await fetch("#", {
+      const response = await fetch("http://localhost:3000/usuarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -30,6 +41,6 @@ document
       const data = await response.json();
       alert(`Registro exitoso: ${data.username}`);
     } catch (error) {
-      alert("Hubo un error: " + error.message);
+      alert("Hubo un error: " + error);
     }
   });
