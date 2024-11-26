@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Principal</title>
+    <title>TODOFIX</title>
     <link rel="stylesheet" href="css/stylesIndex.css" />
-	  
   </head>
   <body>
     <!-- Encabezado -->
@@ -18,39 +17,52 @@
       <div class="header-right">
         <a href="login.html"> <button>Iniciar sesión</button></a>
         <a href="registro.html"> <button>Registrarme</button></a>
-        <span class="location-text">Ubicación</span>
+        <span class="location-text" id="location-text">Ubicación</span>
       </div>
     </header>
 
     <!-- Contenedor principal con fondo de imagen desenfocada -->
     <div class="search-container">
       <h1>Estoy buscando...</h1>
-        <input type="text" placeholder="Buscar..." class="search-bar" id="searchInput">
+      <input
+        type="text"
+        placeholder="Buscar..."
+        class="search-bar"
+        id="searchInput"
+      />
 
-		<button id="searchButton">Buscar</button>
+      <button id="searchButton">Buscar</button>
     </div>
     <div class="main-container">
-    <!-- Botones de categoría -->
-    <div class="button-container">
-      <button class="nav-button" data-category="carpinteria">Carpinteria</button>
-      <button class="nav-button" data-category="plomeria">Plomeria</button>
-      <button class="nav-button" data-category="albañileria">Albañileria</button>
-      <button class="nav-button" data-category="mecanica">Mecanica</button>
-      <button class="nav-button" data-category="herreria">Herreria</button>
-      <button class="nav-button" data-category="jardineria">Jardineria</button>
-      <button class="nav-button" data-category="electricidad">Trabajos electricos</button>
-    </div>
+      <!-- Botones de categoría -->
+      <div class="button-container">
+        <button class="nav-button" data-category="carpinteria">
+          Carpinteria
+        </button>
+        <button class="nav-button" data-category="plomeria">Plomeria</button>
+        <button class="nav-button" data-category="albañileria">
+          Albañileria
+        </button>
+        <button class="nav-button" data-category="mecanica">Mecanica</button>
+        <button class="nav-button" data-category="herreria">Herreria</button>
+        <button class="nav-button" data-category="jardineria">
+          Jardineria
+        </button>
+        <button class="nav-button" data-category="electricidad">
+          Trabajos electricos
+        </button>
+      </div>
 
-    <!-- Contenedor de imágenes -->
-    <div class="image-container">
-      <div class="image-item" data-category="carpinteria">
+      <!-- Contenedor de imágenes -->
+      <div class="image-container">
+        <div class="image-item" data-category="carpinteria">
           <img
             src="Imagenes/Ropero encajonado.png"
             alt="Imagen 2"
             class="square-image"
           />
           <p class="image-text">Ropero encajonado</p>
-          <a href="Detalles del producto.html">
+          <a href="detalles_producto.html">
             <button class="see-more">Ver más</button></a
           >
         </div>
@@ -61,7 +73,7 @@
             class="square-image"
           />
           <p class="image-text">Mesa de madera 6 personas</p>
-          <a href="Detalles del producto.html">
+          <a href="detalles_producto.html">
             <button class="see-more">Ver más</button></a
           >
         </div>
@@ -72,7 +84,7 @@
             class="square-image"
           />
           <p class="image-text">Levantamiento de columnas</p>
-          <a href="Detalles del producto.html">
+          <a href="detalles_producto.html">
             <button class="see-more">Ver más</button></a
           >
         </div>
@@ -82,8 +94,8 @@
             alt="Imagen 5"
             class="square-image"
           />
-          <p class="image-text">Instalación de  tuberias</p>
-          <a href="Detalles del producto.html">
+          <p class="image-text">Instalación de tuberias</p>
+          <a href="detalles_producto.html">
             <button class="see-more">Ver más</button></a
           >
         </div>
@@ -94,26 +106,31 @@
             class="square-image"
           />
           <p class="image-text">Renovación de pintura para carros</p>
-          <a href="Detalles del producto.html">
+          <a href="detalles_producto.html">
             <button class="see-more">Ver más</button></a
           >
-	
+        </div>
+      </div>
     </div>
-		 </div>
-	  </div>
     <!-- Pie de página -->
     <footer>
       <div class="footer-left">
-        <img src="Imagenes/logo_pieDePagina.JPG" alt="Logo" class="footer-logo" />
+        <img
+          src="Imagenes/logo_pieDePagina.JPG"
+          alt="Logo"
+          class="footer-logo"
+        />
         <span><strong>Todofix</strong> 2024®</span>
       </div>
       <div class="footer-right">
-        <a href="Acerca de.html"><button>Acerca de</button></a>
+        <a href="acerca_de_nosotros.html"><button>Acerca de</button></a>
         <a href="Contacto.html"><button>Contacto</button></a>
-        <a href="Aviso.html"><button>Aviso de privacidad</button></a>
+        <a href="acerca_de_nosotros.html"
+          ><button>Aviso de privacidad</button></a
+        >
       </div>
     </footer>
 
-   <script src="js/busqueda.js"></script>
+    <script src="js/busqueda.js"></script>
   </body>
 </html>
