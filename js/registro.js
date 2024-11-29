@@ -14,7 +14,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
 
   console.log(Nombre, ApellidoP, ApellidoM, Telefono, Direccion, Correo, Contrasea, Ciudad);
 
-  const url = valorSeleccionado === "cliente" ? "http://localhost:3000/usuarios" : "http://localhost:3000/trabajadores";
+  const url = valorSeleccionado === "cliente" ? "https://todofix-be-production.up.railway.app/usuarios" : "https://todofix-be-production.up.railway.app/trabajadores";
   const body = {
     Nombre,
     ApellidoP,

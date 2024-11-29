@@ -4,7 +4,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   const Contrasea = document.getElementById("password").value;
 
   try {
-    const response = await fetch("https://todofix-be-production.up.railway.app/auth-user/login", {
+    const response = await fetch("https://todofix-be-production.up.railway.app/auth-trabajador/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ Correo, Contrasea }),
@@ -14,7 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     const data = await response.json();
     alert(`Inicio de sesión exitoso: ${data.user.Nombre}`);
     localStorage.setItem("userData", JSON.stringify(data.user));
-    window.location.href = "/principal.html";
+    window.location.href = "/index_trabajador.html";
   } catch (error) {
     alert("Hubo un error: " + error.message);
   }
