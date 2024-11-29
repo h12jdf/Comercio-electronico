@@ -4,7 +4,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   const Contrasea = document.getElementById("password").value;
 
   try {
-    const response = await fetch("https://todofix-be-production.up.railway.app/auth-user/login", {
+    const response = await fetch("https://todofix-be-production.up.railway.app/auth-usuario/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ Correo, Contrasea }),
