@@ -14,7 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     const data = await response.json();
     alert(`Inicio de sesión exitoso: ${data.user.Nombre}`);
     localStorage.setItem("userData", JSON.stringify(data.user));
-    window.location.href = "Comercio-electronico/index_trabajador.html";
+    window.location.href = "/index_trabajador.html";
   } catch (error) {
     alert("Hubo un error: " + error.message);
   }
