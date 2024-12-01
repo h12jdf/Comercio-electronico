@@ -1,6 +1,6 @@
 const searchButton = document.getElementById("searchButton"); // Botón de búsqueda
 const searchInput = document.getElementById("searchInput");
-const imageItems = document.querySelectorAll(".image-container"); // Obtener todos los elementos de las imágenes
+const imageItems = document.querySelectorAll(".image-item"); // Obtener todos los elementos de las imágenes
 const categoryButtons = document.querySelectorAll(".nav-button"); // Botones de categorías
 
 let activeCategory = null; // Variable para rastrear la categoría activa
