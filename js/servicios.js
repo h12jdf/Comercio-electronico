@@ -2,7 +2,9 @@
 async function loadServices() {
   try {
     // Realizamos la petición al backend
-    const response = await fetch("https://todofix-be-production.up.railway.app/servicios"); // Asegúrate de que esta URL sea la correcta
+    const response = await fetch(
+      "https://todofix-be-production.up.railway.app/servicios"
+    ); // Asegúrate de que esta URL sea la correcta
     if (!response.ok) {
       throw new Error("Error al obtener los servicios");
     }
@@ -34,9 +36,9 @@ async function loadServices() {
       p.classList.add("image-text");
       p.textContent = servicio.Nombre;
 
-      // Creamos el botón "Ver más"
+      // Creamos el enlace "Ver más"
       const a = document.createElement("a");
-      a.href = "detalles_producto.html"; // Aquí puedes redirigir a una página con más detalles del servicio
+      a.href = `detalles_producto.html?idServicio=${servicio.idServicio}`; // Pasamos el idServicio como parámetro en la URL
       const button = document.createElement("button");
       button.classList.add("see-more");
       button.textContent = "Ver más";
