@@ -74,16 +74,17 @@
         >
       </div>
     </footer>
-     <script>
- const searchButton = document.getElementById('searchButton'); // Botón de búsqueda
+<script>
+const searchButton = document.getElementById('searchButton'); // Botón de búsqueda
 const searchInput = document.getElementById('searchInput');
-const imageItems = document.querySelectorAll('.image-item'); // Obtener todos los elementos de las imágenes
 const categoryButtons = document.querySelectorAll('.nav-button'); // Botones de categorías
+const servicesContainer = document.getElementById('services-container'); // Contenedor donde se cargan los servicios
 
 let activeCategory = null; // Variable para rastrear la categoría activa
 
 // Mostrar todas las imágenes al cargar la página
 function showAllImages() {
+  const imageItems = servicesContainer.querySelectorAll('.image-item');
   imageItems.forEach(item => {
     item.style.display = 'block';
   });
@@ -96,19 +97,7 @@ showAllImages();
 searchButton.addEventListener('click', () => {
   const query = searchInput.value.toLowerCase().trim(); // Obtener texto de búsqueda
 
-  imageItems.forEach(item => {
-    const descriptionElement = item.querySelector('.image-container'); // Buscar el texto dentro de la imagen
-    const descriptionText = descriptionElement.textContent.toLowerCase();
-
-    // Lógica para mostrar u ocultar los elementos según la búsqueda
-    if (descriptionText.includes(query)) {
-      item.style.display = 'block'; // Mostrar el elemento si hay coincidencias
-      descriptionElement.innerHTML = highlightText(descriptionElement.textContent, query); // Resaltar el texto
-    } else {
-      item.style.display = 'none'; // Ocultar el elemento si no hay coincidencias
-      descriptionElement.innerHTML = descriptionElement.textContent; // Restablecer el texto sin resaltar
-    }
-  });
+  filterImages(query);
 });
 
 // Función para resaltar las coincidencias en el texto
@@ -132,13 +121,13 @@ categoryButtons.forEach(button => {
       button.classList.add('active');
     }
 
-    filterImages();
+    filterImages(searchInput.value.toLowerCase().trim()); // Filtrar según búsqueda actual
   });
 });
 
 // Función para filtrar imágenes
-function filterImages() {
-  const query = searchInput.value.toLowerCase().trim();
+function filterImages(query) {
+  const imageItems = servicesContainer.querySelectorAll('.image-item');
 
   imageItems.forEach(item => {
     const itemCategory = item.getAttribute('data-category');
@@ -162,7 +151,56 @@ function filterImages() {
     }
   });
 }
-  </script>
+
+// Función para cargar los servicios desde la base de datos (simulado)
+function loadServicesFromDatabase() {
+  // Aquí se simula la carga de datos desde una base de datos
+  // Normalmente se usaría fetch o AJAX para obtener datos de un servidor
+
+  const services = [
+    {
+      category: 'carpinteria',
+      image: 'Imagenes/carpinteria1.PNG',
+      description: 'Mesa de madera 6 personas',
+    },
+    {
+      category: 'plomeria',
+      image: 'Imagenes/curso-online-de-plomeria.jpg',
+      description: 'Instalación de inodoro',
+    },
+    {
+      category: 'albanileria',
+      image: 'Imagenes/8-beneficios-de-usar-placas-de-yeso-en-la-remodelacion-de-tu-hogar-9.jpg',
+      description: 'Levantamiento de columnas',
+    },
+    // Agregar más servicios según sea necesario
+  ];
+
+  // Limpiar el contenedor
+  servicesContainer.innerHTML = '';
+
+  // Insertar los servicios cargados
+  services.forEach(service => {
+    const serviceElement = document.createElement('div');
+    serviceElement.classList.add('image-item');
+    serviceElement.setAttribute('data-category', service.category);
+
+    serviceElement.innerHTML = `
+      <img src="${service.image}" alt="Imagen de servicio" class="square-image" />
+      <p class="image-text">${service.description}</p>
+      <a href="Detalles del producto.html">
+        <button class="see-more">Ver más</button>
+      </a>
+    `;
+
+    // Agregar el elemento al contenedor
+    servicesContainer.appendChild(serviceElement);
+  });
+}
+
+// Cargar los servicios al inicio
+loadServicesFromDatabase();
+</script>
     <script src="js/busqueda.js"></script>   
     <script src="js/servicios_ns.js"></script>
   </body>
