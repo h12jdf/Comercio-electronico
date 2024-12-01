@@ -7,6 +7,7 @@ function getQueryParam(param) {
 // Función para cargar los detalles del servicio
 async function loadServiceDetails() {
   const idServicio = getQueryParam("idServicio"); // Obtenemos el idServicio de la URL
+  console.log(idServicio)
 
   if (!idServicio) {
     alert("No se proporcionó un ID de servicio válido.");
