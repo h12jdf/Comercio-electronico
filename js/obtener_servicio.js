@@ -7,7 +7,7 @@ function getQueryParam(param) {
 // Función para cargar los detalles del servicio
 async function loadServiceDetails() {
   const idServicio = getQueryParam("idServicio"); // Obtenemos el idServicio de la URL
-  console.log(idServicio)
+  console.log(id)
 
   if (!idServicio) {
     alert("No se proporcionó un ID de servicio válido.");
@@ -26,7 +26,7 @@ async function loadServiceDetails() {
     const servicio = await response.json();
 
     // Actualizamos el contenido de la página con los detalles del servicio
-    document.getElementById("nombreTrabajador").textContent = servicio.trabajdor.nombre
+    document.getElementById("nombreTrabajador").textContent = servicio.trabajador.nombre
     document.getElementById("nombreServicio").textContent = servicio.Nombre;
     document.getElementById(
       "service-image"
