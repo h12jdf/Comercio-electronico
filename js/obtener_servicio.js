@@ -7,7 +7,7 @@ function getQueryParam(param) {
 // Función para cargar los detalles del servicio
 async function loadServiceDetails() {
   const idServicio = getQueryParam("idServicio"); // Obtenemos el idServicio de la URL
-
+  console.log(idServicio)
   if (!idServicio) {
     alert("No se proporcionó un ID de servicio válido.");
     return;
@@ -25,19 +25,11 @@ async function loadServiceDetails() {
     const servicio = await response.json();
 
     // Actualizamos el contenido de la página con los detalles del servicio
-    document.getElementById("nombreTrabajador").textContent = servicio.trabajador.nombre
+    document.getElementById("nombreTrabajador").textContent = servicio.trabajador.Nombre
     document.getElementById("nombreServicio").textContent = servicio.Nombre;
-    document.getElementById(
-      "service-image"
-    ).src = `https://todofix-be-production.up.railway.app/uploads/${servicio.Imagen}`;
-    document.getElementById("descripcion_servicio").textContent =
-      servicio.Descripcion;
-    document.getElementById(
-      "detalle_producto"
-    ).textContent = `Categoría: ${servicio.Categoria}`;
-    document.getElementById(
-      "precio_base"
-    ).textContent = `Precio base: ${servicio.Precio_base}`;
+    document.getElementById("service-image").src = `https://todofix-be-production.up.railway.app/uploads/${servicio.Imagen}`;
+    document.getElementById("descripcion_servicio").textContent = servicio.Descripcion;
+    document.getElementById("precio_base").textContent = `Precio base: $${servicio.Precio_base}`;
   } catch (error) {
     console.error("Hubo un error:", error);
     alert("Error al cargar los detalles del servicio.");
