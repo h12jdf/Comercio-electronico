@@ -98,7 +98,7 @@ searchButton.addEventListener('click', () => {
   const query = searchInput.value.toLowerCase().trim(); // Obtener texto de búsqueda
 
   imageItems.forEach(item => {
-    const descriptionElement = item.querySelector('.image-text'); // Buscar el texto dentro de la imagen
+    const descriptionElement = item.querySelector('.image-container'); // Buscar el texto dentro de la imagen
     const descriptionText = descriptionElement.textContent.toLowerCase();
 
     // Lógica para mostrar u ocultar los elementos según la búsqueda
@@ -163,7 +163,6 @@ function filterImages() {
     }
   });
 }
-    <script src="js/busqueda.js"></script>
     <script src="js/servicios.js"></script>
   </body>
 </html>
