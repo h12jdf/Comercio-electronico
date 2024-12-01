@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitudes de Trabajo</title>
+    <link rel="stylesheet" href="css/stylesIndexS.css" />
+    <!-- Asegúrate de que el CSS esté vinculado correctamente -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <img src="Imagenes/user.png" alt="Icono" class="icon" />
+        <span class="username">Nombre de Usuario</span>
+      </div>
+      <div class="header-right">
+        <button onclick="window.location.href='index.html'">Inicio</button>
+        <button onclick="window.location.href='solicitudes.html'">
+          Solicitudes
+        </button>
+        <button>Ubicación</button>
+      </div>
+    </header>
+
+    <!-- Contenido principal: Solicitudes -->
+    <div class="main-container">
+      <div class="requests-container">
+        <h2>SOLICITUDES EN ESPERA</h2>
+
+        <!-- Solicitudes -->
+        <div class="request-item">
+          <div class="request-info">
+            <h3>Detalles</h3>
+            <p><strong>Trabajo solicitado:</strong></p>
+            <p><strong>Solicitado por:</strong></p>
+            <p><strong>Contacto:</strong></p>
+            <p><strong>Nombre del trabajador:</strong> </p>
+          </div>
+          <div class="request-actions">
+			  
+			 <div class="request-actions">
+			<button src=" " class="accept-button" style="width: 200px; height: 35px;">Ver detalles</button>
+
+			<div id="customAlert2" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                             width: 300px; padding: 20px; background: white; border: 2px solid #FF7F50; 
+                             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; z-index: 1000;">
+  <p style="color: #333;">La solicitud ha sido cancelada.</p>
+  <button onclick="cerrarAlerta()2" style="margin-top: 10px; padding: 5px 10px; background: red; color: white; 
+                                           border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>
+</div>
+<div id="overlay2" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                         background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+<button onclick="mostrarAlerta2()" class="reject-button" style="width: 200px; height: 35px;">Cancelar solicitud</button>
+       
+ 
+        </div>
+
+			</div>
+      </div>
+    </div>
+		</div>
+    <div class="main-container">
+      <div class="requests-container">
+        <h2>SOLICITUDES ACEPTADAS</h2>
+
+        <!-- Solicitudes -->
+        <div class="request-item">
+          <div class="request-info">
+            <h3>Detalles</h3>
+            <p><strong>Trabajo solicitado:</strong></p>
+            <p><strong>Solicitado por:</strong></p>
+            <p><strong>Contacto:</strong></p>
+            <p><strong>Nombre del trabajador:</strong> </p>
+          </div>
+          <div class="request-actions">
+			<div id="customAlert" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                             width: 300px; padding: 20px; background: white; border: 2px solid #FF7F50; 
+                             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; z-index: 1000;">
+  <p style="color: #333;">El servicio no se encuentra disponible por el momento debido a la carga de trabajo del trabajador. Favor de intentar más tarde.</p>
+  <button onclick="cerrarAlerta()" style="margin-top: 10px; padding: 5px 10px; background: #FF7F50; color: white; 
+                                           border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>
+</div>
+<div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                         background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+
+<button onclick="mostrarAlerta()" 
+        style="padding: 0; border: none; background: none; width: 200px; height: 35px;">
+  <img src="Imagenes/paypal.jpg" alt="Imagen botón" style="width: 100%; height: 100%; object-fit: cover;" />
+</button>  
+            
+			 <div id="customAlert1" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                             width: 300px; padding: 20px; background: white; border: 2px solid #FF7F50; 
+                             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; z-index: 1000;">
+  <p style="color: #333;">El servicio ha sido cancelado exitosamente</p>
+  <button onclick="cerrarAlerta1()" style="margin-top: 10px; padding: 5px 10px; background: #FF7F50; color: white; 
+                                           border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>
+</div>
+<div id="overlay1" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                         background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+
+<button onclick="mostrarAlerta1()" class="reject-button" style="width: 200px; height: 35px;">Cancelar</button>
+       
+
+          </div>
+        </div>
+
+ 
+      </div>
+    </div>
+	  
+	  
+    <!-- Footer -->
+    <footer>
+      <!-- Sección izquierda con imagen y texto -->
+      <div class="footer-left">
+        <img
+          src="Imagenes/logo_pieDePagina.JPG"
+          alt="Logo"
+          class="footer-logo"
+        />
+        <span><strong>Todofix </strong> 2024®</span>
+      </div>
+
+      <!-- Sección derecha con botones de texto -->
+      <div class="footer-right">
+        <a href="Acerca de.html"> <button>Acerca de</button></a>
+        <a href="Contacto.html"> <button>Contacto</button></a>
+        <a href="Acerca de.html"> <button>Aviso de privacidad</button></a>
+      </div>
+    </footer>
+    <script src="js/validador.js"></script>
+	<script src="js/alertas.js"></script>
+  </body>
+</html>
