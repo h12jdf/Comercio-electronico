@@ -25,17 +25,18 @@ async function loadServiceDetails() {
     const servicio = await response.json();
 
     // Actualizamos el contenido de la página con los detalles del servicio
-    document.getElementById("service-title").textContent = servicio.Nombre;
+    document.getElementById("nombreTrabajador").textContent = servicio.trabajdor.Nombre
+    document.getElementById("nombreServicio").textContent = servicio.Nombre;
     document.getElementById(
       "service-image"
     ).src = `https://todofix-be-production.up.railway.app/uploads/${servicio.Imagen}`;
-    document.getElementById("service-description").textContent =
+    document.getElementById("descripcion_servicio").textContent =
       servicio.Descripcion;
     document.getElementById(
-      "service-category"
+      "detalle_producto"
     ).textContent = `Categoría: ${servicio.Categoria}`;
     document.getElementById(
-      "service-price"
+      "precio_base"
     ).textContent = `Precio base: ${servicio.Precio_base}`;
   } catch (error) {
     console.error("Hubo un error:", error);

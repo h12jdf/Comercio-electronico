@@ -31,7 +31,7 @@
         />
         <!-- Imagen en la parte superior -->
         <div class="text-section">
-          <h2 class="service-title">(Nombre del trabajador)</h2>
+          <h2 class="service-title" id="nombreTrabajador"></h2>
           <p class="service-description">Documentos</p>
           <p class="service-description">Valoraciones</p>
         </div>
@@ -46,7 +46,7 @@
         <p class="service-description">Ubicacion:</p>
       </div>
       <div class="carousel-container">
-        <center><h1>Nombre del servicio</h1></center>
+        <center><h1 id="nombreServicio"></h1></center>
         <div class="carousel-container">
           <div class="carousel">
             <div class="carousel-item">
@@ -110,9 +110,9 @@
           <img class="modal-content" id="modalImage" />
           <div id="caption"></div>
         </div>
-        <h2>$ ## MXN</h2>
-        <h2>Detalles del producto</h2>
-        <h3>escribe aqui la descripcion....</h3>
+        <h2 id="precio_base">$ ## MXN</h2>
+        <h2 id="detalle_producto">Detalles del producto</h2>
+        <h3 id="descripcion_servicio">escribe aqui la descripcion....</h3>
         <div class="text-section">
           <p>Valoraciones del servicio/producto</p>
         </div>
@@ -150,6 +150,7 @@
       </div>
     </footer>
 
+    <script src="js/obtener_servicio.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
