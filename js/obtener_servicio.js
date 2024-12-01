@@ -25,7 +25,7 @@ async function loadServiceDetails() {
     const servicio = await response.json();
 
     // Actualizamos el contenido de la página con los detalles del servicio
-    document.getElementById("nombreTrabajador").textContent = servicio.trabajdor.Nombre
+    document.getElementById("nombreTrabajador").textContent = servicio.trabajdor.nombre
     document.getElementById("nombreServicio").textContent = servicio.Nombre;
     document.getElementById(
       "service-image"
