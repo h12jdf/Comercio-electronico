@@ -5,7 +5,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: white; /* Fondo blanco para la página principal */
     display: flex;
-	flex-direction: column;  /* Para que el contenido ocupe toda la altura disponible */
+    flex-direction: column;  /* Para que el contenido ocupe toda la altura disponible */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
 }
 
 
@@ -273,15 +274,16 @@ button {
 .button-container {
     display: flex;
     flex-direction: column; /* Alineación en columna */
-    align-items: stretch; /* Alinear botones al ancho completo del contenedor */
-    margin-top: 20px; /* Espacio sobre los botones */
-    width: 50%; /* Asegura que el ancho sea el mismo que el div de búsqueda */
-    margin-left: auto; /* Alineación a la izquierda */
-    margin-right: 10px; /* Espacio a la derecha */
-    gap: 10px; /* Espacio entre botones */
-    box-sizing: border-box; /* Incluye los bordes y el padding en el cálculo del ancho */
-    height: 300px; /* Definir una altura fija, ajusta según sea necesario */
-    max-width: 100%; /* Asegura que no se expanda más allá del contenedor padre */
+    align-items: stretch; /* Alinear los botones al ancho completo */
+    width: 30%; /* Ancho fijo */
+    flex-grow: 0; /* Evita que crezca */
+    flex-shrink: 0; /* Evita que se reduzca */
+    gap: 10px; /* Espaciado interno entre botones */
+    margin-top: 20px; /* Espacio superior */
+    position: absolute; /* Posiciona el contenedor relativo al main-container */
+    left: 0; /* Mantiene el contenedor alineado a la izquierda */
+	margin-bottom: 20px; /* Espacio para separar del footer */
+
 }
 
 .nav-button {
@@ -301,11 +303,15 @@ button {
 }
 .image-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
     justify-content: flex-start; /* Alineación a la izquierda */
-	margin-left: 10px; /* Espacio a la izquierda del contenedor de imágenes */
-    gap: 30px; /* Espacio entre cada unidad */
-    margin-top: 20px; /* Espacio encima del contenedor de imágenes */
+    width: calc(70% - 2%); /* Ocupa el espacio restante ajustando por el gap */
+    margin-left: 32%; /* Mueve el contenedor a la derecha, después del button-container */
+    gap: 30px; /* Espaciado entre elementos dentro del contenedor */
+    margin-top: 20px; /* Espacio superior */
+	flex-grow: 1;
+	margin-bottom: 20px; /* Espacio para separar del footer */
+
 }
 
 .image-item {
@@ -688,13 +694,16 @@ button {
 }
 
 .main-container {
-    display: flex; /* Alinea los contenedores en fila */
-    align-items: flex-start; /* Alinea los elementos al inicio */
-    justify-content: flex-start; /* Alinear a la izquierda */
-    margin-top: 20px; /* Espacio encima del contenedor principal */
-	width: 90%; /* Ancho reducido */
-	margin: 30px auto; /* Centrado en la pantalla */
-	gap: 0.5%; /* Espacio entre los elementos (botones e información del vendedor) */
+    display: flex; /* Alinea los elementos en fila */
+    justify-content: flex-start; /* Alinear los elementos al inicio (izquierda) */
+    align-items: flex-start; /* Mantener la alineación superior */
+    width: 90%; /* Ancho reducido */
+    margin: 30px auto; /* Centrado horizontal en la pantalla */
+    gap: 2%; /* Espaciado entre los elementos hijos */
+    position: relative; /* Asegura que los elementos mantengan su posición relativa dentro del contenedor */
+    margin-bottom: 20px; /* Espacio para separar del footer */
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio disponible en la columna */
+
 }
 
 .service-container {
