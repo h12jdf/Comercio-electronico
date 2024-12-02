@@ -37,11 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
         Metodo_Pago: metodoPago,
         Fecha_programada: fechaProgramada,
       };
-
-      console.log(`https://todofix-be-production.up.railway.app/solicitud-servicio/${fkUsuario}/${fkTrabajador}/${fkServicio}`)
       // Enviar la solicitud al backend
       const response = await fetch(
-        `https://todofix-be-production.up.railway.app/solicitud-servicio/${fkUsuario}/${fkTrabajador}/${fkServicio}`,
+        `https://todofix-be-production.up.railway.app/solicitud-servicio/${fkServicio}/${fkTrabajador}/${fkUsuario}`,
         {
           method: "POST",
           headers: {
