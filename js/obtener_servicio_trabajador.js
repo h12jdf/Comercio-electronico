@@ -15,7 +15,6 @@ document.getElementById("mis-servicios").addEventListener("click", async () => {
   
       const servicios = await response.json();
       const serviceContainer = document.getElementById("service-container");
-      serviceContainer.innerHTML = ""; // Limpiar contenido previo
   
       // Filtrar los servicios por idTrabajador
       const serviciosFiltrados = servicios.filter(
