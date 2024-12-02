@@ -1,4 +1,4 @@
-document.getElementById("nuevos-servicios").addEventListener("submit", async (e) => {
+document.getElementById("nuevo_servicio").addEventListener("submit", async (e) => {
     const comboBox = document.getElementById("service-category");
     const valorSeleccionado = comboBox.value.trim();
   
