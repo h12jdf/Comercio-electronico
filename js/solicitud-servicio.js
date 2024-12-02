@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       alert("¡Servicio solicitado con éxito!");
+      window.location.href = window.location.origin + "/Comercio-electronico/principal.html";
     } catch (error) {
       console.error("Hubo un error:", error);
       alert("Error al solicitar el servicio, intenta nuevamente.");
