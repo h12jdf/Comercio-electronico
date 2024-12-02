@@ -43,6 +43,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
 
     const data = JSON.parse(text); // Parse the JSON response
     alert(`Registro exitoso: ${data.username}`);
+    window.location.href = window.location.origin + "/Comercio-electronico/login.html"
   } catch (error) {
     console.error("Hubo un error:", error); // Print the complete error message
   }
