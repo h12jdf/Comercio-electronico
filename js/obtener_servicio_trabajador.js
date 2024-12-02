@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           const servicios = await response.json();
-          const serviceContainer = document.getElementById("service-container");
+          const serviceContainer = document.getElementById("service-list");
           if (!serviceContainer) {
               console.error("No se encontró el contenedor de servicios");
               return;
