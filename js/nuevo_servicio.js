@@ -1,10 +1,10 @@
 document.getElementById("nuevo_servicio").addEventListener("submit", async (e) => {
-    e.preventDefault();
-  
-    // Capturamos los valores del formulario
     const comboBox = document.getElementById("service-category");
     const valorSeleccionado = comboBox.value.trim();
   
+    e.preventDefault();
+  
+    // Capturamos los valores del formulario
     const userData = localStorage.getItem("userData");
     const parsedUserData = JSON.parse(userData);
     const fktrabajador = parsedUserData.idTrabajador;
