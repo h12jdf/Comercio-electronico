@@ -34,7 +34,7 @@ document.getElementById("mis-servicios").addEventListener("click", async () => {
   
         const imagenUrl = servicio.Imagen.startsWith("http")
           ? servicio.Imagen
-          : `https://todofix-be-production.up.railway.app${servicio.Imagen}`;
+          : `https://todofix-be-production.up.railway.app/uploads/${servicio.Imagen}`;
   
         serviceElement.innerHTML = `
           <h3>${servicio.Nombre}</h3>
