@@ -21,7 +21,6 @@ document.getElementById("mis-servicios").addEventListener("click", async () => {
     console.log("Servicios recibidos:", servicios);
 
     const serviceContainer = document.getElementById("service-container");
-    serviceContainer.innerHTML = ""; // Limpiar el contenedor antes de agregar los servicios
 
     if (servicios.length === 0) {
       serviceContainer.innerHTML =
