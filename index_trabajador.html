@@ -12,23 +12,23 @@
       <div class="header-left">
         <img src="Imagenes/user.png" alt="Icono" class="icon" />
         <!-- Icono -->
-        <span class="username">Nombre de Usuario</span>
+        <span class="username" id="username">Nombre de Usuario</span>
         <!-- Nombre de usuario -->
       </div>
       <div class="header-right">
         <a href="index.html"> <button>Inicio</button></a>
         <a href="solicitudes.html"> <button>Mis solicitudes</button></a>
-        <span class="location-text">Ubicación</span>
+        <span class="location-text" id="location-text"></span>
       </div>
     </header>
-	  <div class="titulo-container">
-        <div class="servicio-container">
-			<center>
-            <h2>BIENVENIDO AL PANEL DE LOS TRABAJADORES</h2>
-            <p>EN ESTE PANEL PODRAS GESTIONAR LA INFORMACIÓN DE TUS TRABAJOS.</p>
-			</center>
-		  </div>
-	  </div>
+    <div class="titulo-container">
+      <div class="servicio-container">
+        <center>
+          <h2>BIENVENIDO AL PANEL DE LOS TRABAJADORES</h2>
+          <p>EN ESTE PANEL PODRAS GESTIONAR LA INFORMACIÓN DE TUS TRABAJOS.</p>
+        </center>
+      </div>
+    </div>
     <div class="main-container">
       <div class="service-container">
         <img
@@ -38,7 +38,7 @@
         />
         <!-- Imagen actual que permanece -->
         <div class="text-section">
-          <h2 class="service-title">(Nombre del trabajador)</h2>
+          <h2 class="service-title" id="username"></h2>
           <img
             src="Imagenes/lapiz.png"
             alt="Editar"
@@ -77,6 +77,7 @@
           alt="Edita"
           onclick="openPopup()"
           class="side-image"
+          id="location-text"
         >
           Ubicacion:
         </p>
@@ -97,8 +98,7 @@
           </div>
         </div>
       </div>
-	
-		
+
       <div class="services-containers">
         <button class="service-button" id="mis-servicios">
           <div class="overlay">
@@ -174,19 +174,8 @@
       <div class="popup-content">
         <button id="close-my-services" class="close-btn">X</button>
         <h2>Mis Servicios</h2>
-
-        <div class="service-list">
-          <!-- Ejemplo de un servicio -->
-          <div class="service-item">
-            <img
-              src="Imagenes/Ropero encajonado.png"
-              alt="Servicio"
-              class="service-image"
-            />
-            <span class="service-title">Nombre del Servicio</span>
-            <button class="delete-btn">X</button>
-          </div>
-          <!-- Agrega más servicios aquí -->
+        <div id="service-list" class="service-list">
+          <!-- Los servicios se agregarán aquí dinámicamente -->
         </div>
       </div>
     </div>
@@ -199,19 +188,35 @@
         <button id="cancel-delete" class="dialog-btn">No</button>
       </div>
     </div>
-	<hr class="divider-small"> <!-- Línea negra debajo del botón Entrar -->     
-	 <div class="titulo-container">
-        <div class="servicio-container">
-			<center>
-            <h3>CONSEJOS PARA MEJORAR TU DESEMPEÑO:</h3></center>
-            <p>	-Responde a las solicitudes rápidamente para demostrar tu profesionalismo.</p>
-            <p>	-Ofrece precios competitivos y calidad en tu trabajo para recibir buenas calificaciones.</p>
-            <p>	-Mantén tu perfil actualizado y completo para atraer más clientes.</p>
-			<p>Recuerda que siempre estamos aquí para ayudarte. Si tienes alguna pregunta, puedes ponerte en contacto con nuestro equipo de soporte o visitar la sección de FAQ para obtener más información.</p>
-			<p>¡Sigue trabajando duro y aprovecha al máximo tu experiencia con nosotros!</p>	
-			
-		  </div>
-	  </div>
+    <hr class="divider-small" />
+    <!-- Línea negra debajo del botón Entrar -->
+    <div class="titulo-container">
+      <div class="servicio-container">
+        <center>
+          <h3>CONSEJOS PARA MEJORAR TU DESEMPEÑO:</h3>
+        </center>
+        <p>
+          -Responde a las solicitudes rápidamente para demostrar tu
+          profesionalismo.
+        </p>
+        <p>
+          -Ofrece precios competitivos y calidad en tu trabajo para recibir
+          buenas calificaciones.
+        </p>
+        <p>
+          -Mantén tu perfil actualizado y completo para atraer más clientes.
+        </p>
+        <p>
+          Recuerda que siempre estamos aquí para ayudarte. Si tienes alguna
+          pregunta, puedes ponerte en contacto con nuestro equipo de soporte o
+          visitar la sección de FAQ para obtener más información.
+        </p>
+        <p>
+          ¡Sigue trabajando duro y aprovecha al máximo tu experiencia con
+          nosotros!
+        </p>
+      </div>
+    </div>
 
     <footer>
       <!-- Sección izquierda con imagen y texto -->
@@ -228,9 +233,12 @@
       <div class="footer-right">
         <a href="acerca_de_nosotros.html"> <button>Acerca de</button></a>
         <a href="Contacto.html"> <button>Contacto</button></a>
-        <a href="acerca_de_nosotros.html"> <button>Aviso de privacidad</button></a>
+        <a href="acerca_de_nosotros.html">
+          <button>Aviso de privacidad</button></a
+        >
       </div>
     </footer>
+    <script src="js/validador.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
