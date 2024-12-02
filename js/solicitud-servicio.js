@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Fecha_programada: fechaProgramada,
       };
 
+      console.log(`https://todofix-be-production.up.railway.app/solicitud-servicio/${fkUsuario}/${fkTrabajador}/${fkServicio}`)
       // Enviar la solicitud al backend
       const response = await fetch(
         `https://todofix-be-production.up.railway.app/solicitud-servicio/${fkUsuario}/${fkTrabajador}/${fkServicio}`,
