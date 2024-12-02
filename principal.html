@@ -18,8 +18,10 @@
       </div>
       <div class="header-right">
         <a href="principal.html"> <button>Inicio</button></a>
+
         <a href="Solicitudes.html"> <button>Mis solicitudes</button></a>
         <span class="location-text" id="location-text">Ubicación</span>
+        <a href="principal.html"> <button>Cerrar sesion</button></a>
       </div>
     </header>
 
@@ -76,6 +78,93 @@
         >
       </div>
     </footer>
+    <script>
+      const searchButton = document.getElementById("searchButton"); // Botón de búsqueda
+      const searchInput = document.getElementById("searchInput");
+      const categoryButtons = document.querySelectorAll(".nav-button"); // Botones de categorías
+      const servicesContainer = document.getElementById("services-container"); // Contenedor donde se cargan los servicios
+
+      let activeCategory = null; // Variable para rastrear la categoría activa
+
+      // Mostrar todas las imágenes al cargar la página
+      function showAllImages() {
+        const imageItems = servicesContainer.querySelectorAll(".image-item");
+        imageItems.forEach((item) => {
+          item.style.display = "block";
+        });
+      }
+
+      // Ejecutar la función inicial
+      showAllImages();
+
+      // Función para realizar la búsqueda cuando se hace clic en el botón
+      searchButton.addEventListener("click", () => {
+        const query = searchInput.value.toLowerCase().trim(); // Obtener texto de búsqueda
+
+        filterImages(query);
+      });
+
+      // Función para resaltar las coincidencias en el texto
+      function highlightText(text, query) {
+        const regex = new RegExp(query, "gi"); // Crear una expresión regular insensible a mayúsculas/minúsculas
+        return text.replace(
+          regex,
+          (match) => `<span class="highlight">${match}</span>`
+        ); // Resaltar coincidencias
+      }
+
+      // Filtro por categoría
+      categoryButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const selectedCategory = button.getAttribute("data-category");
+
+          // Alternar activación/desactivación del filtro
+          if (activeCategory === selectedCategory) {
+            activeCategory = null; // Desactivar si ya estaba activo
+            button.classList.remove("active");
+          } else {
+            activeCategory = selectedCategory; // Activar nueva categoría
+            categoryButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+          }
+
+          filterImages(searchInput.value.toLowerCase().trim()); // Filtrar según búsqueda actual
+        });
+      });
+
+      // Función para filtrar imágenes
+      function filterImages(query) {
+        const imageItems = servicesContainer.querySelectorAll(".image-item");
+
+        imageItems.forEach((item) => {
+          const itemCategory = item.getAttribute("data-category");
+          const descriptionElement = item.querySelector(".image-text");
+          const descriptionText = descriptionElement.textContent.toLowerCase();
+
+          // Mostrar elementos según la categoría y/o búsqueda
+          if (
+            (activeCategory === null || itemCategory === activeCategory) &&
+            (query === "" || descriptionText.includes(query))
+          ) {
+            item.style.display = "block";
+            if (query) {
+              descriptionElement.innerHTML = highlightText(
+                descriptionElement.textContent,
+                query
+              );
+            } else {
+              descriptionElement.innerHTML = descriptionElement.textContent;
+            }
+          } else {
+            item.style.display = "none";
+            descriptionElement.innerHTML = descriptionElement.textContent;
+          }
+        });
+      }
+
+      // Cargar los servicios al inicio
+      loadServicesFromDatabase();
+    </script>
     <script src="js/servicios.js"></script>
     <script src="js/validador.js"></script>
     <script src="js/busqueda.js"></script>

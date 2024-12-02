@@ -14,7 +14,7 @@
         <span class="bienvenida">Bienvenido a TodoFix</span>
       </div>
       <div class="header-right">
-        <a href="login.html"> <button>Cerrar sesion</button></a>
+        <a href="login.html"> <button>Iniciar sesion</button></a>
         <a href="registro.html"> <button>Registrarme</button></a>
         <span class="location-text" id="location-text">Ubicación</span>
       </div>
@@ -149,52 +149,6 @@ function filterImages(query) {
       item.style.display = 'none';
       descriptionElement.innerHTML = descriptionElement.textContent;
     }
-  });
-}
-
-// Función para cargar los servicios desde la base de datos (simulado)
-function loadServicesFromDatabase() {
-  // Aquí se simula la carga de datos desde una base de datos
-  // Normalmente se usaría fetch o AJAX para obtener datos de un servidor
-
-  const services = [
-    {
-      category: 'carpinteria',
-      image: 'Imagenes/carpinteria1.PNG',
-      description: 'Mesa de madera 6 personas',
-    },
-    {
-      category: 'plomeria',
-      image: 'Imagenes/curso-online-de-plomeria.jpg',
-      description: 'Instalación de inodoro',
-    },
-    {
-      category: 'albanileria',
-      image: 'Imagenes/8-beneficios-de-usar-placas-de-yeso-en-la-remodelacion-de-tu-hogar-9.jpg',
-      description: 'Levantamiento de columnas',
-    },
-    // Agregar más servicios según sea necesario
-  ];
-
-  // Limpiar el contenedor
-  servicesContainer.innerHTML = '';
-
-  // Insertar los servicios cargados
-  services.forEach(service => {
-    const serviceElement = document.createElement('div');
-    serviceElement.classList.add('image-item');
-    serviceElement.setAttribute('data-category', service.category);
-
-    serviceElement.innerHTML = `
-      <img src="${service.image}" alt="Imagen de servicio" class="square-image" />
-      <p class="image-text">${service.description}</p>
-      <a href="Detalles del producto.html">
-        <button class="see-more">Ver más</button>
-      </a>
-    `;
-
-    // Agregar el elemento al contenedor
-    servicesContainer.appendChild(serviceElement);
   });
 }
 

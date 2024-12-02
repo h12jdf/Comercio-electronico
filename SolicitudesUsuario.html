@@ -35,31 +35,76 @@
             <p><strong>Trabajo solicitado:</strong></p>
             <p><strong>Solicitado por:</strong></p>
             <p><strong>Contacto:</strong></p>
-            <p><strong>Nombre del trabajador:</strong> </p>
+            <p><strong>Nombre del trabajador:</strong></p>
           </div>
           <div class="request-actions">
-			  
-			 <div class="request-actions">
-			<button src=" " class="accept-button" style="width: 200px; height: 35px;">Ver detalles</button>
+            <div class="request-actions">
+              <button
+                src=" "
+                class="accept-button"
+                style="width: 200px; height: 35px"
+              >
+                Ver detalles
+              </button>
 
-			<div id="customAlert2" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-                             width: 300px; padding: 20px; background: white; border: 2px solid #FF7F50; 
-                             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; z-index: 1000;">
-  <p style="color: #333;">La solicitud ha sido cancelada.</p>
-  <button onclick="cerrarAlerta()2" style="margin-top: 10px; padding: 5px 10px; background: red; color: white; 
-                                           border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>
-</div>
-<div id="overlay2" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-                         background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
-<button onclick="mostrarAlerta2()" class="reject-button" style="width: 200px; height: 35px;">Cancelar solicitud</button>
-       
- 
+              <div
+                id="customAlert2"
+                style="
+                  display: none;
+                  position: fixed;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 300px;
+                  padding: 20px;
+                  background: white;
+                  border: 2px solid #ff7f50;
+                  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                  text-align: center;
+                  z-index: 1000;
+                "
+              >
+                <p style="color: #333">La solicitud ha sido cancelada.</p>
+                <button
+                  onclick="cerrarAlerta()"
+                  style="
+                    margin-top: 10px;
+                    padding: 5px 10px;
+                    background: red;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                  "
+                >
+                  Cerrar
+                </button>
+              </div>
+              <div
+                id="overlay2"
+                style="
+                  display: none;
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: rgba(0, 0, 0, 0.5);
+                  z-index: 999;
+                "
+              ></div>
+              <button
+                onclick="mostrarAlerta2()"
+                class="reject-button"
+                style="width: 200px; height: 35px"
+              >
+                Cancelar solicitud
+              </button>
+            </div>
+          </div>
         </div>
-
-			</div>
       </div>
     </div>
-		</div>
     <div class="main-container">
       <div class="requests-container">
         <h2>SOLICITUDES ACEPTADAS</h2>
@@ -71,45 +116,137 @@
             <p><strong>Trabajo solicitado:</strong></p>
             <p><strong>Solicitado por:</strong></p>
             <p><strong>Contacto:</strong></p>
-            <p><strong>Nombre del trabajador:</strong> </p>
+            <p><strong>Nombre del trabajador:</strong></p>
           </div>
           <div class="request-actions">
-			<div id="customAlert" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-                             width: 300px; padding: 20px; background: white; border: 2px solid #FF7F50; 
-                             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; z-index: 1000;">
-  <p style="color: #333;">El servicio no se encuentra disponible por el momento debido a la carga de trabajo del trabajador. Favor de intentar más tarde.</p>
-  <button onclick="cerrarAlerta()" style="margin-top: 10px; padding: 5px 10px; background: #FF7F50; color: white; 
-                                           border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>
-</div>
-<div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-                         background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+            <div
+              id="customAlert"
+              style="
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 300px;
+                padding: 20px;
+                background: white;
+                border: 2px solid #ff7f50;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                z-index: 1000;
+              "
+            >
+              <p style="color: #333">
+                El servicio no se encuentra disponible por el momento debido a
+                la carga de trabajo del trabajador. Favor de intentar más tarde.
+              </p>
+              <button
+                onclick="cerrarAlerta()"
+                style="
+                  margin-top: 10px;
+                  padding: 5px 10px;
+                  background: #ff7f50;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                "
+              >
+                Cerrar
+              </button>
+            </div>
+            <div
+              id="overlay"
+              style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+              "
+            ></div>
 
-<button onclick="mostrarAlerta()" 
-        style="padding: 0; border: none; background: none; width: 200px; height: 35px;">
-  <img src="Imagenes/paypal.jpg" alt="Imagen botón" style="width: 100%; height: 100%; object-fit: cover;" />
-</button>  
-            
-			 <div id="customAlert1" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-                             width: 300px; padding: 20px; background: white; border: 2px solid #FF7F50; 
-                             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; z-index: 1000;">
-  <p style="color: #333;">El servicio ha sido cancelado exitosamente</p>
-  <button onclick="cerrarAlerta1()" style="margin-top: 10px; padding: 5px 10px; background: #FF7F50; color: white; 
-                                           border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>
-</div>
-<div id="overlay1" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-                         background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+            <button
+              onclick="mostrarAlerta()"
+              style="
+                padding: 0;
+                border: none;
+                background: none;
+                width: 200px;
+                height: 35px;
+              "
+            >
+              <img
+                src="Imagenes/paypal.jpg"
+                alt="Imagen botón"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </button>
 
-<button onclick="mostrarAlerta1()" class="reject-button" style="width: 200px; height: 35px;">Cancelar</button>
-       
+            <div
+              id="customAlert1"
+              style="
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 300px;
+                padding: 20px;
+                background: white;
+                border: 2px solid #ff7f50;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                z-index: 1000;
+              "
+            >
+              <p style="color: #333">
+                El servicio ha sido cancelado exitosamente
+              </p>
+              <button
+                onclick="cerrarAlerta1()"
+                style="
+                  margin-top: 10px;
+                  padding: 5px 10px;
+                  background: #ff7f50;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                "
+              >
+                Cerrar
+              </button>
+            </div>
+            <div
+              id="overlay1"
+              style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+              "
+            ></div>
 
+            <button
+              onclick="mostrarAlerta1()"
+              class="reject-button"
+              style="width: 200px; height: 35px"
+            >
+              Cancelar
+            </button>
           </div>
         </div>
-
- 
       </div>
     </div>
-	  
-	  
+
     <!-- Footer -->
     <footer>
       <!-- Sección izquierda con imagen y texto -->
@@ -130,6 +267,6 @@
       </div>
     </footer>
     <script src="js/validador.js"></script>
-	<script src="js/alertas.js"></script>
+    <script src="js/alertas.js"></script>
   </body>
 </html>
