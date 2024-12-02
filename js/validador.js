@@ -10,3 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = window.location.origin + "/Comercio-electronico/login.html";
   }
 });
+
+document.getElementById("logout-button").addEventListener("click", () => {
+  // Eliminar los datos del usuario de localStorage
+  localStorage.removeItem("userData");
+
+  // Redirigir a la página de inicio de sesión
+  window.location.href = window.location.origin + "/Comercio-electronico/principal.html";;
+});
