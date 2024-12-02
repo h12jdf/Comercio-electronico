@@ -1,4 +1,4 @@
-document.getElementById("nuevos-servicios").addEventListener("click", async () => {
+document.getElementById("mis-servicios").addEventListener("click", async () => {
     const userData = localStorage.getItem("userData");
     if (!userData) {
       alert("Inicia sesión para ver los servicios.");
