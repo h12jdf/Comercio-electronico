@@ -1,4 +1,5 @@
 document.getElementById("nuevo_servicio").addEventListener("submit", async (e) => {
+    alert("Entro aqui")
     const comboBox = document.getElementById("service-category");
     const valorSeleccionado = comboBox.value.trim();
   
@@ -9,7 +10,7 @@ document.getElementById("nuevo_servicio").addEventListener("submit", async (e) =
     const parsedUserData = JSON.parse(userData);
     const fktrabajador = parsedUserData.idTrabajador;
   
-    const Nombre = document.getElementById("nombre").value;
+    const Nombre = document.getElementById("service-name").value;
     const Descripcion = document.getElementById("descripcion").value;
     const Categoria = valorSeleccionado;
     const Precio_base = document.getElementById("precio").value;
