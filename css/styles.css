@@ -289,18 +289,16 @@ form textarea::placeholder {
 	font-size: 18;
 }
 
-
 /* Botón de Registro */
 .register-button {
     padding: 10px;
-    background-color: white;
-    color: orange;
-    border: 2px solid #d46321;
+    background-color:#1B1B1B;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 10px;
+	margin-left: 20px;
 }
 .form-section button:hover {
     background-color: #d46321;
