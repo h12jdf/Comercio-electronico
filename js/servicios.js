@@ -31,6 +31,7 @@ async function loadServices() {
       img.alt = servicio.Nombre;
       img.classList.add("square-image");
 
+      console.log(img.src)
       // Creamos el texto con el nombre del servicio
       const p = document.createElement("p");
       p.classList.add("image-text");
