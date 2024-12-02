@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Enviar la solicitud al backend
       const response = await fetch(
-        `https://todofix-be-production.up.railway.app/solicitud-servicio/${fkTrabajador}`,
+        `https://todofix-be-production.up.railway.app/solicitud-servicio/${fkUsuario}/${fkTrabajador}/${fkServicio}`,
         {
           method: "POST",
           headers: {
