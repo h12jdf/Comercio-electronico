@@ -14,6 +14,7 @@ document.getElementById("mis-servicios").addEventListener("click", async () => {
       if (!response.ok) throw new Error("Error al cargar los servicios.");
   
       const servicios = await response.json();
+      console.log("Servicios recibidos:", servicios);
       const serviceContainer = document.getElementById("service-container");
   
       // Filtrar los servicios por idTrabajador
