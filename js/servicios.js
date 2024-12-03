@@ -31,11 +31,15 @@ async function loadServices() {
       img.alt = servicio.Nombre;
       img.classList.add("square-image");
 
-      console.log(img.src)
       // Creamos el texto con el nombre del servicio
-      const p = document.createElement("p");
-      p.classList.add("image-text");
-      p.textContent = servicio.Nombre;
+      const nameText = document.createElement("p");
+      nameText.classList.add("image-text");
+      nameText.textContent = servicio.Nombre;
+
+      // Creamos el texto con la descripción del servicio
+      const descriptionText = document.createElement("p");
+      descriptionText.classList.add("image-description");
+      descriptionText.textContent = servicio.Descripcion; // Asegúrate de que "Descripcion" sea la clave correcta en tu objeto JSON
 
       // Creamos el enlace "Ver más"
       const a = document.createElement("a");
@@ -45,9 +49,10 @@ async function loadServices() {
       button.textContent = "Ver más";
       a.appendChild(button);
 
-      // Agregamos la imagen, texto y botón al contenedor del servicio
+      // Agregamos la imagen, el texto del nombre, la descripción y el botón al contenedor del servicio
       serviceItem.appendChild(img);
-      serviceItem.appendChild(p);
+      serviceItem.appendChild(nameText);
+      serviceItem.appendChild(descriptionText);
       serviceItem.appendChild(a);
 
       // Finalmente, agregamos el contenedor del servicio al contenedor principal
